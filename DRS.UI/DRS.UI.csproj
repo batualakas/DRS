@@ -52,6 +52,12 @@
     <Compile Include="HastaKayıt.Designer.cs">
       <DependentUpon>HastaKayıt.cs</DependentUpon>
     </Compile>
+    <Compile Include="HastaKayıtEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaKayıtEkranı.Designer.cs">
+      <DependentUpon>HastaKayıtEkranı.cs</DependentUpon>
+    </Compile>
     <Compile Include="HastaListesi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="HastaKayıt.resx">
       <DependentUpon>HastaKayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaKayıtEkranı.resx">
+      <DependentUpon>HastaKayıtEkranı.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HastaListesi.resx">
       <DependentUpon>HastaListesi.cs</DependentUpon>

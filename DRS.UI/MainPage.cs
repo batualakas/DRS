@@ -97,7 +97,7 @@ namespace DRS.UI
             Form DoktorKayitEkrani = null;
             foreach (Form varOlanEkran in Application.OpenForms)
             {
-                if(varOlanEkran.Text == "DoktorKayitEkrani")
+                if (varOlanEkran.Text == "DoktorKayitEkrani")
                 {
                     DoktorKayitEkrani = varOlanEkran;
                 }
@@ -108,8 +108,15 @@ namespace DRS.UI
             }
             else
             {
-                
+               
+                        
             }
+
+            #region SayfalariTekrarla
+
+
+
+            #endregion
 
         }
 
