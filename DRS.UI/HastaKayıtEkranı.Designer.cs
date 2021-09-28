@@ -42,13 +42,13 @@ namespace DRS.UI
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.rdbKadin = new System.Windows.Forms.RadioButton();
+            this.rdbErkek = new System.Windows.Forms.RadioButton();
+            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
-            this.rdbErkek = new System.Windows.Forms.RadioButton();
-            this.rdbKadin = new System.Windows.Forms.RadioButton();
             this.mtxtTCKN = new System.Windows.Forms.MaskedTextBox();
             this.mttxtTelefon = new System.Windows.Forms.MaskedTextBox();
             this.btnTemizle = new System.Windows.Forms.Button();
@@ -182,19 +182,42 @@ namespace DRS.UI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // textBox1
+            // rdbKadin
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 0;
+            this.rdbKadin.AutoSize = true;
+            this.rdbKadin.Location = new System.Drawing.Point(7, 44);
+            this.rdbKadin.Name = "rdbKadin";
+            this.rdbKadin.Size = new System.Drawing.Size(52, 17);
+            this.rdbKadin.TabIndex = 13;
+            this.rdbKadin.TabStop = true;
+            this.rdbKadin.Text = "Kadın";
+            this.rdbKadin.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // rdbErkek
             // 
-            this.textBox2.Location = new System.Drawing.Point(158, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 1;
+            this.rdbErkek.AutoSize = true;
+            this.rdbErkek.Location = new System.Drawing.Point(7, 21);
+            this.rdbErkek.Name = "rdbErkek";
+            this.rdbErkek.Size = new System.Drawing.Size(53, 17);
+            this.rdbErkek.TabIndex = 12;
+            this.rdbErkek.TabStop = true;
+            this.rdbErkek.Text = "Erkek";
+            this.rdbErkek.UseVisualStyleBackColor = true;
+            // 
+            // txtAd
+            // 
+            this.txtAd.Location = new System.Drawing.Point(158, 6);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(149, 20);
+            this.txtAd.TabIndex = 0;
+            this.txtAd.TextChanged += new System.EventHandler(this.txtAd_TextChanged);
+            // 
+            // txtSoyad
+            // 
+            this.txtSoyad.Location = new System.Drawing.Point(158, 32);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(149, 20);
+            this.txtSoyad.TabIndex = 1;
             // 
             // textBox4
             // 
@@ -218,28 +241,6 @@ namespace DRS.UI
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
             this.dtpDogumTarihi.Size = new System.Drawing.Size(200, 20);
             this.dtpDogumTarihi.TabIndex = 3;
-            // 
-            // rdbErkek
-            // 
-            this.rdbErkek.AutoSize = true;
-            this.rdbErkek.Location = new System.Drawing.Point(7, 21);
-            this.rdbErkek.Name = "rdbErkek";
-            this.rdbErkek.Size = new System.Drawing.Size(53, 17);
-            this.rdbErkek.TabIndex = 12;
-            this.rdbErkek.TabStop = true;
-            this.rdbErkek.Text = "Erkek";
-            this.rdbErkek.UseVisualStyleBackColor = true;
-            // 
-            // rdbKadin
-            // 
-            this.rdbKadin.AutoSize = true;
-            this.rdbKadin.Location = new System.Drawing.Point(7, 44);
-            this.rdbKadin.Name = "rdbKadin";
-            this.rdbKadin.Size = new System.Drawing.Size(52, 17);
-            this.rdbKadin.TabIndex = 13;
-            this.rdbKadin.TabStop = true;
-            this.rdbKadin.Text = "Kadın";
-            this.rdbKadin.UseVisualStyleBackColor = true;
             // 
             // mtxtTCKN
             // 
@@ -275,9 +276,11 @@ namespace DRS.UI
             this.btnKaydet.TabIndex = 14;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // nudKilo
             // 
+            this.nudKilo.DecimalPlaces = 2;
             this.nudKilo.Location = new System.Drawing.Point(158, 246);
             this.nudKilo.Name = "nudKilo";
             this.nudKilo.Size = new System.Drawing.Size(120, 20);
@@ -285,6 +288,7 @@ namespace DRS.UI
             // 
             // nudBoy
             // 
+            this.nudBoy.DecimalPlaces = 2;
             this.nudBoy.Location = new System.Drawing.Point(158, 272);
             this.nudBoy.Name = "nudBoy";
             this.nudBoy.Size = new System.Drawing.Size(120, 20);
@@ -322,8 +326,8 @@ namespace DRS.UI
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.dtpDogumTarihi);
             this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSoyad);
+            this.Controls.Add(this.txtAd);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label2);
@@ -366,8 +370,8 @@ namespace DRS.UI
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdbKadin;
         private System.Windows.Forms.RadioButton rdbErkek;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.DateTimePicker dtpDogumTarihi;

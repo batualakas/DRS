@@ -21,5 +21,22 @@ namespace DRS.UI
         {
 
         }
+
+        private void btnYenile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //hastalar listesinden bu kişiyi bulup sildir.
+            
+        }
+
+        private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // seçilen elemanı alıp ekrandaki gerekli alanları doldurmak.
+            // HastaDüzenlemeEkrani
+        }
     }
 }

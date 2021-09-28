@@ -36,5 +36,17 @@ namespace DRS.UI
         {
 
         }
+        
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            
+            
+
+        }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

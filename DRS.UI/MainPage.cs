@@ -112,11 +112,7 @@ namespace DRS.UI
                         
             }
 
-            #region SayfalariTekrarla
-
-
-
-            #endregion
+            
 
         }
 
